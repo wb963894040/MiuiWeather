@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:MiuiWeatherView="http://schemas.android.com/apk/res-auto"
+    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hl.policeweather.activity.SplashActivity">
+
+    <in.srain.cube.views.ptr.PtrFrameLayout
+        android:id="@+id/layout_ptr_fresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="2.0">
+
+        <com.hl.policeweather.view.CustomScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.hl.policeweather.view.WeatherAnimView
+                        android:id="@+id/weather"
+                        android:layout_width="match_parent"
+                        android:layout_height="340dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:layout_marginLeft="@dimen/margin_larger"
+                        android:layout_marginTop="@dimen/margin_35"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_district"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="雨花区"
+                            android:textAppearance="@style/TextAppearance.FontPath"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_cur_temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-1"
+                                android:textAppearance="@style/TextAppearance.FontPath"
+                                android:textColor="@color/white"
+                                android:textSize="40sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_8"
+                                android:gravity="top"
+                                android:paddingTop="@dimen/margin_8"
+                                android:text="℃"
+                                android:textAppearance="@style/TextAppearance.FontPath"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_weather"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="雨花区"
+                                android:textAppearance="@style/TextAppearance.FontPath"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_4"
+                                android:layout_marginRight="@dimen/margin_4"
+                                android:background="@color/white" />
+
+                            <TextView
+                                android:id="@+id/txt_quality"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="良"
+                                android:textAppearance="@style/TextAppearance.FontPath"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="@dimen/margin_normal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_wind_direct"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="西风"
+                                android:textAppearance="@style/TextAppearance.FontPath"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/txt_wind_level"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_4"
+                                android:text="2级"
+                                android:textAppearance="@style/TextAppearance.FontPath"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="相对湿度"
+                                android:textAppearance="@style/TextAppearance.FontPath"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/txt_humidity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_4"
+                                android:text="30%"
+                                android:textAppearance="@style/TextAppearance.FontPath"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="气压"
+                                android:textAppearance="@style/TextAppearance.FontPath"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/txt_air_press"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_4"
+                                android:text="1025 pa"
+                                android:textAppearance="@style/TextAppearance.FontPath"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_larger"
+                    android:layout_marginRight="@dimen/margin_larger"
+                    android:gravity="center_vertical"
+                    android:minHeight="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今天"
+                        android:textColor="@color/color_666666"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_today_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_sunny" />
+
+                        <TextView
+                            android:id="@+id/txt_today_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:text="晴"
+                            android:textColor="@color/color_666666"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:background="@color/color_666666" />
+
+                        <TextView
+                            android:id="@+id/txt_today_air_press"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="良"
+                            android:textColor="@color/color_666666"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_today_temp_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-1/-8℃"
+                        android:textColor="@color/color_666666"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/margin_larger"
+                    android:layout_marginRight="@dimen/margin_larger"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_larger"
+                    android:layout_marginRight="@dimen/margin_larger"
+                    android:gravity="center_vertical"
+                    android:minHeight="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_tomorrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="明天"
+                        android:textColor="@color/color_666666"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_tomorrow_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_sunny" />
+
+                        <TextView
+                            android:id="@+id/txt_tomorrow_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:text="晴"
+                            android:textColor="@color/color_666666"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:background="@color/color_666666" />
+
+                        <TextView
+                            android:id="@+id/txt_tomorrow_air_press"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="良"
+                            android:textColor="@color/color_666666"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_tomorrow_temp_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-1/-8℃"
+                        android:textColor="@color/color_666666"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/margin_larger"
+                    android:layout_marginRight="@dimen/margin_larger"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_larger"
+                    android:layout_marginRight="@dimen/margin_larger"
+                    android:gravity="center_vertical"
+                    android:minHeight="60dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_after_tomorrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weekday"
+                        android:textColor="@color/color_666666"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_after_tomorrow_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/icon_sunny" />
+
+                        <TextView
+                            android:id="@+id/txt_after_tomorrow_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:text="晴"
+                            android:textColor="@color/color_666666"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="@dimen/margin_8"
+                            android:layout_marginRight="@dimen/margin_8"
+                            android:background="@color/color_666666" />
+
+                        <TextView
+                            android:id="@+id/txt_after_tomorrow_air_press"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="良"
+                            android:textColor="@color/color_666666"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_after_tomorrow_temp_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-1/-8℃"
+                        android:textColor="@color/color_666666"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/light_gray" />
+
+                <LinearLayout
+                    android:id="@+id/layout_more_forecast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="45dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15天趋势预报"
+                        android:textColor="@color/color_666666"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_8"
+                    android:background="@color/light_gray_20_percent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin_8"
+                    android:text="24小时天气预报"
+                    android:textColor="@color/color_666666"
+                    android:textSize="14sp" />
+
+                <com.hl.policeweather.view.MiuiWeatherView
+                    android:id="@+id/chart_weather_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    MiuiWeatherView:background_color="#ffffff"
+                    MiuiWeatherView:line_interval="60dp"
+                    MiuiWeatherView:min_point_height="60dp" />
+            </LinearLayout>
+        </com.hl.policeweather.view.CustomScrollView>
+    </in.srain.cube.views.ptr.PtrFrameLayout>
+</LinearLayout>

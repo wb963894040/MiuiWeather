@@ -1,0 +1,38 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="colorPrimary">@color/color_333333</item>-->
+        <!--<item name="colorPrimaryDark">@color/color_333333</item>-->
+        <!--<item name="colorAccent">@color/color_333333</item>-->
+    </style>
+
+    <!--全屏加透明-->
+    <style name="TranslucentFullScreenTheme" parent="FullScreenTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--全屏-->
+    <style name="FullScreenTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--透明，有任务栏电量时间等-->
+    <style name="NoTitleTranslucentTheme" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/blank</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!--<item name="colorPrimaryDark">@color/blank_30_percent</item>-->
+        <!--<item name="colorPrimary">@color/blank_30_percent</item>-->
+    </style>
+
+    <style name="TranslucentTheme" parent="AppTheme">
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+    </style>
+
+    <style name="TextAppearance.FontPath" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/thinfont-thin.ttf</item>
+    </style>
+</resources>

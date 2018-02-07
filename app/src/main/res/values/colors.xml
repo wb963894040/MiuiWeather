@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#11b9ff</color>
+    <color name="colorPrimaryDark">#11b9ff</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="light_gray">#60A6A5A5</color>
+    <color name="light_gray_20_percent">#33A6A5A5</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="blank">#000000</color>
+    <color name="blank_20_percent">#33000000</color>
+    <color name="blank_30_percent">#4D000000</color>
+    <color name="blank_50_percent">#80000000</color>
+    <color name="blank_70_percent">#b4000000</color>
+    <color name="blank_80_percent">#cd000000</color>
+    <color name="white_30_percent">#4DFFFFFF</color>
+    <color name="white_50_percent">#80FFFFFF</color>
+    <color name="white_70_percent">#B4FFFFFF</color>
+    <color name="white_80_percent">#CDFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+</resources>

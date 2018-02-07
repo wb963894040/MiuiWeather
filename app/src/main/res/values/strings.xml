@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">天气助手</string>
+    <string name="widget_tips_first">使用桌面插件时，请勿关闭天气客户端</string>
+    <string name="widget_tips_second">如发现插件数据错误，请保持客户端后台正常运行</string>
+    <string name="weekday">周%s</string>
+</resources>
